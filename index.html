@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Home</title>
+  <link type="image/x-icon" rel="shortcut icon" href="icons/logo.svg">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+
+<body>
+
+  <div class="main-page">
+
+    <header class="header">
+      <nav class="menu">
+        <div class="menu__items">
+          <a href="#" class="menu__item menu__item--active">О проекте</a>
+          <a href="blog.html" class="menu__item">Блог</a>
+          <a href="#" class="menu__item">Партнёры</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="info">
+      <button class="info__btn">
+        <img src="img/filter-button.svg" alt="Filter button" class="info__img">
+      </button>
+
+      <div class="info-inner-minimise">
+        <a href="#" class="info-inner-minimise__link">
+          <svg width="33" height="35" class="info-small-logo">
+            <use xlink:href="icons/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="info-inner">
+
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="img/logo.png" alt="Find Home" class="info-big-logo">
+          </a>
+        </div>
+
+        <form class="filter">
+
+          <div class="filter-top">
+            <h3 class="filter-top__title">Фильтр</h3>
+            <button class="filter-top__clear" type="reset">Очистить фильтр</button>
+          </div>
+
+
+          <div class="readiness">
+            <span class="filter__title readiness__title">Готовность объекта</span>
+
+            <div class="filter-readiness">
+
+              <div class="filter-readiness__item">
+                <label for="documents" class="filter-readiness__label">
+                  <input type="radio" id="documents" name="readiness" value="documents" class="filter-readiness__input"
+                    checked="checked">
+                  Сбор документов
+                  <span class="filter-readiness__radio"></span>
+                </label>
+              </div>
+
+              <div class="filter-readiness__item">
+                <label for="ground-floors" class="filter-readiness__label">
+                  <input type="radio" id="ground-floors" name="readiness" value="ground-floors"
+                    class="filter-readiness__input">
+                  Первые этажи
+                  <span class="filter-readiness__radio"></span>
+                </label>
+              </div>
+
+              <div class="filter-readiness__item">
+                <label for="basin" class="filter-readiness__label">
+                  <input type="radio" id="basin" name="readiness" value="basin" class="filter-readiness__input">
+                  Котлован
+                  <span class="filter-readiness__radio"></span>
+                </label>
+              </div>
+
+              <div class="filter-readiness__item">
+                <label for="top-floor" class="filter-readiness__label">
+                  <input type="radio" id="top-floor" name="readiness" value="top-floor" class="filter-readiness__input">
+                  Последние этажи
+                  <span class="filter-readiness__radio"></span>
+                </label>
+              </div>
+
+              <div class="filter-readiness__item">
+                <label for="leased" class="filter-readiness__label">
+                  <input type="radio" id="leased" name="readiness" value="leased" class="filter-readiness__input">
+                  Объект сдан
+                  <span class="filter-readiness__radio"></span>
+                </label>
+              </div>
+
+              <div class="filter-readiness__item">
+                <label for="cap" class="filter-readiness__label">
+                  <input type="radio" id="cap" name="readiness" value="cap" class="filter-readiness__input">
+                  Цоколь
+                  <span class="filter-readiness__radio"></span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="height">
+            <span class="filter__title height__title">Этажность</span>
+
+            <div class="h-items">
+              <label for="1-5" class="h-item__label">
+                <input type="radio" id="1-5" name="height" value="1-5" class="h-item__input">
+                <span class="h-item__value">1-5</span>
+              </label>
+              <label for="5-10" class="h-item__label">
+                <input type="radio" id="5-10" name="height" value="5-10" class="h-item__input">
+                <span class="h-item__value">5-10</span>
+              </label>
+              <label for="10-20" class="h-item__label">
+                <input type="radio" id="10-20" name="height" value="10-20" class="h-item__input">
+                <span class="h-item__value">10-20</span>
+              </label>
+              <label for="20-40" class="h-item__label">
+                <input type="radio" id="20-40" name="height" value="20-40" class="h-item__input" checked="checked">
+                <span class="h-item__value">20-40</span>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="price">
+
+            <div class="price-metre">
+
+              <div class="currency">
+                <span class="filter__title currency__title">Цена за м <sup>2</sup></span>
+
+                <button class="currency__dollar">
+                  <svg class="currency__dollar-img--active">
+                    <use xlink:href="icons/sprite.svg#dollar--active"></use>
+                  </svg>
+                  <svg class="currency__dollar-img">
+                    <use xlink:href="icons/sprite.svg#dollar"></use>
+                  </svg>
+                </button>
+
+                <button class="currency__hryvnya">
+                  <svg class="currency__hryvnya-img--active">
+                    <use xlink:href="icons/sprite.svg#hryvnya--active"></use>
+                  </svg>
+                  <svg class="currency__hryvnya-img">
+                    <use xlink:href="icons/sprite.svg#hryvnya"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="price-filter">
+
+                <div class="min-price">
+                  <input type="number" id="min-price-m" name="price-metre" value="450" class="min-price__input">
+                  <label for="min-price-m" class="min-price__label">от</label>
+                </div>
+
+                <div class="max-price">
+                  <input type="number" id="max-price-m" name="price-metre" value="850" class="max-price__input">
+                  <label for="max-price-m" class="max-price__label">до</label>
+                </div>
+
+                <button class="price-filter__button" type="submit">Применить</button>
+
+              </div>
+            </div>
+
+            <div class="price-total">
+              <span class="filter__title price-total__title">Общая стоимость квартиры, тыс.</span>
+
+              <div class="price-filter">
+
+                <div class="min-price">
+                  <input type="number" id="min-price-t" name="price-total" value="30000" class="min-price__input">
+                  <label for="min-price-t" class="min-price__label">от</label>
+                </div>
+
+                <div class="max-price">
+                  <input type="number" id="max-price-t" name="price-total" value="85000" class="max-price__input">
+                  <label for="max-price-t" class="max-price__label">до</label>
+                </div>
+
+                <button class="price-filter__button" type="submit">Применить</button>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="rating">
+            <span class="filter__title rating__title">Рейтинг</span>
+
+            <div class="rating-stars">
+
+              <div class="rating-stars__item">
+                <label for="one-rating-star" class="rating-stars__label">
+                  <input type="radio" id="one-rating-star" name="rating" value="one-rating-star"
+                    class="rating-stars__input">
+                  <span class="rating-stars__img">
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rating-stars__item">
+                <label for="two-rating-star" class="rating-stars__label">
+                  <input type="radio" id="two-rating-star" name="rating" value="two-rating-star"
+                    class="rating-stars__input">
+                  <span class="rating-stars__img">
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rating-stars__item">
+                <label for="three-rating-star" class="rating-stars__label">
+                  <input type="radio" id="three-rating-star" name="rating" value="three-rating-star"
+                    class="rating-stars__input" checked="checked">
+                  <span class="rating-stars__img">
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rating-stars__item">
+                <label for="four-rating-star" class="rating-stars__label">
+                  <input type="radio" id="four-rating-star" name="rating" value="four-rating-star"
+                    class="rating-stars__input">
+                  <span class="rating-stars__img">
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rating-stars__item">
+                <label for="five-rating-star" class="rating-stars__label">
+                  <input type="radio" id="five-rating-star" name="rating" value="five-rating-star"
+                    class="rating-stars__input">
+                  <span class="rating-stars__img">
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                    <svg width="16" height="15">
+                      <use xlink:href="icons/sprite.svg#rating-star"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <div id="map" class="map"></div>
+
+    <div class="big-card">
+
+      <div class="big-card__top">
+        <h2 class="big-card__title h2-title">Новый Берег</h2>
+
+        <button class="big-card__close-btn">
+          <svg width="27" height="27" class="big-card__close-img">
+            <use xlink:href="icons/sprite.svg#close-btn"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="big-card__rating">
+        <span class="big-card__rating-title">Рейтинг:</span>
+        <div class="big-card__rating-items">
+
+          <div class="big-card__rating-item">
+            <svg class="big-card__rating-star" width="18" height="16">
+              <use xlink:href="icons/sprite.svg#rating-star-yellow"></use>
+            </svg>
+          </div>
+
+          <div class="big-card__rating-item">
+            <svg class="big-card__rating-star" width="18" height="16">
+              <use xlink:href="icons/sprite.svg#rating-star-yellow"></use>
+            </svg>
+          </div>
+
+          <div class="big-card__rating-item">
+            <svg class="big-card__rating-star" width="18" height="16">
+              <use xlink:href="icons/sprite.svg#rating-star-yellow"></use>
+            </svg>
+          </div>
+
+          <div class="big-card__rating-item">
+            <svg class="big-card__rating-star" width="18" height="16">
+              <use xlink:href="icons/sprite.svg#rating-star-yellow"></use>
+            </svg>
+          </div>
+
+          <div class="big-card__rating-item">
+            <svg class="big-card__rating-star" width="18" height="16">
+              <use xlink:href="icons/sprite.svg#rating-star-yellow"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="big-card-info">
+        <div class="big-card-info__item">
+          <span class="big-card-info__title">Район</span>
+          <span class="big-card-info__value">Суворовский</span>
+        </div>
+        <div class="big-card-info__item">
+          <span class="big-card-info__title">Строительная Компания</span>
+          <span class="big-card-info__value">Будова</span>
+        </div>
+        <div class="big-card-info__item">
+          <span class="big-card-info__title">Цена</span>
+          <span class="big-card-info__value">от 8 000 грн</span>
+        </div>
+        <div class="big-card-info__item">
+          <span class="big-card-info__title">Этажность </span>
+          <span class="big-card-info__value">24 этажа</span>
+        </div>
+        <div class="big-card-info__item">
+          <span class="big-card-info__title">Готовность обьекта</span>
+          <span class="big-card-info__value">Сдан</span>
+        </div>
+      </div>
+
+      <div class="big-card-sl">
+
+        <div class="big-card-sl-top">
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-1.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-2.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-1.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-2.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-1.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-2.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-1.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+          <div class="big-card-sl-top__item">
+            <img src="img/slider-img-2.jpg" alt="Slider image" class="big-card-sl-top__img">
+          </div>
+        </div>
+
+        <div class="big-card-sl-nav">
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-1.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-2.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-1.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-2.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-1.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-2.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-1.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+          <div class="big-card-sl-nav__item">
+            <img src="img/slider-img-1.jpg" alt="Slider Nav Image" class="big-card-sl-nav__img">
+          </div>
+        </div>
+
+      </div>
+
+      <p class="big-card__paragraph">Здания жилого комплекса запроектированы с учетом современных требований и
+        современного передового опыта в решении архитектурно – пространственного облика и надежности здания. Исходя из
+        этажности жилого комплекса, была принята следующая схема – монолитный железобетонный каркас с внутренними
+        несущими стенами.</p>
+      <p class="big-card__paragraph">При проектировании комплекса учтены требования ДБН В.1.1-12:2006 «Будівництво в
+        сейсмічних районах», в результате здания легко выдержат нормативную сейсмическую нагрузку, равную 7 баллам.</p>
+
+      <div class="big-card-video">
+        <img src="img/video-img.jpg" alt="Video" class="big-card-video__img">
+      </div>
+
+      <p class="big-card__paragraph">Здания жилого комплекса запроектированы с учетом современных требований и
+        современного передового опыта в решении архитектурно – пространственного облика и надежности здания. Исходя из
+        этажности жилого комплекса, была принята следующая схема – монолитный железобетонный каркас с внутренними
+        несущими стенами.</p>
+
+      <div class="big-card-banner">
+        <a href="#" class="big-card-banner__link" target="_blank">
+          <img src="img/banner.jpg" alt="Новостройки Ташкента" class="big-card-banner__img">
+        </a>
+      </div>
+
+    </div>
+
+    <div class="about">
+
+      <div class="about__inner">
+
+        <div class="about-project">
+          <div class="container">
+            <h2 class="about-project__title h2-title">О проекте</h2>
+
+            <div class="about-content">
+              <div class="about-f-block">
+                <img src="img/about-img.jpg" alt="MeetDistrict" class="about-f-block__img">
+
+                <p class="about-f-block__paragraph">Значимость этих проблем настолько очевидна, что консультация с
+                  широким
+                  активом играет важную роль в формировании систем массового участия. Таким образом постоянный
+                  количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке системы
+                  обучения кадров, соответствует насущным потребностям. Таким образом постоянное
+                  информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и
+                  модернизации новых предложений. Не следует, однако забывать, что сложившаяся структура организации
+                  играет важную роль в формировании направлений прогрессивного развития. С другой стороны реализация
+                  намеченных плановых заданий требуют определения и уточнения новых предложений.</p>
+
+                <p class="about-f-block__paragraph">Повседневная практика показывает, что укрепление и развитие
+                  структуры
+                  представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным
+                  потребностям.</p>
+              </div>
+
+              <div class="about-s-block">
+                <p class="about-s-block__paragraph">Товарищи! дальнейшее развитие различных форм деятельности требуют от
+                  нас анализа новых предложений. Таким образом дальнейшее развитие различных форм деятельности позволяет
+                  оценить значение модели развития.</p>
+
+                <p class="about-s-block__paragraph">Равным образом начало повседневной работы по формированию позиции
+                  способствует подготовки и реализации направлений прогрессивного развития. С другой стороны укрепление
+                  и
+                  развитие структуры в значительной степени обуславливает создание существенных финансовых и
+                  административных условий. Равным образом новая модель организационной деятельности влечет за собой
+                  процесс внедрения и модернизации модели развития.</p>
+
+                <p class="about-s-block__join-paragraph">Хотите быть частью нашей удивительной команды? Вы пришли в
+                  нужное
+                  место. Пишите нам по электронной почте или позвоните нам.</p>
+
+                <div class="contact-us">
+                  <a href="tel:+380689441770" class="contact-us__tel">+38 (068) 94 41 770</a>
+                  <a href="mailto:find-home@gmail.com" class="contact-us__email">find-home@gmail.com</a>
+                </div>
+
+                <div class="social">
+                  <a href="#" class="social__link">
+                    <svg width="28" height="28" class="social__link-instagram">
+                      <use xlink:href="icons/sprite.svg#instagram"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                    <svg width="34" height="28" class="social__link-twitter">
+                      <use xlink:href="icons/sprite.svg#twitter"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                    <svg width="14" height="28" class="social__link-facebook">
+                      <use xlink:href="icons/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&map_ids=c9b9a9f20654610a&callback=initMap&libraries=&v=weekly"
+    async></script>
+  <script src="js/map.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
